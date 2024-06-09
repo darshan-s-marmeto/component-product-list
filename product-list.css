@@ -10,6 +10,8 @@
 .product-list__link a {
   color: inherit;
   white-space: nowrap;
+  background: linear-gradient(to right, currentColor, currentColor) 0 min(100%, 1.35em) / 0 1px no-repeat;
+  transition: background-size 0.3s ease-in-out;
 }
 .product-list__icon {
   display: inline-block;
@@ -25,6 +27,13 @@
   justify-content: center;
   gap: 1.2rem;
   cursor: pointer;
+}
+.product-list__link:hover a {
+  background-size: 100% 1px;
+}
+.product-list__link:hover .product-list__icon {
+  background: rgba(26, 26, 26, 1);
+  color: rgba(255, 255, 255, 1);
 }
 .splide__list,
 .slider_container {
